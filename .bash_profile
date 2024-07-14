@@ -1,5 +1,5 @@
 # Greeting message
-echo "Hello \$USER"
+echo "Hello $USER"
 
 # Check if .token file exists and its permissions
 if [ -f "\$HOME/.token" ]; then
