@@ -1,7 +1,7 @@
 # Greeting message
 echo "Hello $USER"
 
-export COURSE_ID="DevOpsTheHardWay"
+export COURSE_ID="__REPO_NAME__"
 
 
 # Check if .token file exists and its permissions
