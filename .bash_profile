@@ -1,16 +1,4 @@
- Greeting message
-echo "Hello $USER"
-
-# Check permissions of .token file
-token_file="$HOME/.token"
-if [ -f "$token_file" ]; then
-    permissions=$(stat -c "%a" "$token_file")
-    if [ "$permissions" != "600" ]; then
-        echo "Warning: .token file has too open permissions"
-    fi
-else
-    echo "Warning: .token file does not exist"
-fi
+  GNU nano 7.2                                          .bash_profile
 
 export PATH="$PATH:/home/john/usercommands"
 
@@ -23,3 +11,18 @@ alias ltxt='ls *.txt'
 
 # Define environment variable COURSE_ID
 export COURSE_ID="DevOpsTheHardWay"
+
+# Greeting message
+echo "Hello $USER"
+
+# Check if .token file exists
+token_file="$HOME/.token"
+if [ -f "$token_file" ]; then
+    # Check permissions of .token file
+    permissions=$(stat -c "%a" "$token_file")
+    if [ "$permissions" != "600" ]; then
+        echo "Warning: .token file has too open permissions"
+    fi
+else
+    echo "Warning: .token file does not exist"
+fi
