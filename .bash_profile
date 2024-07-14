@@ -15,3 +15,10 @@ fi
 umask 006
 export PATH="/home/$USER/usercommands:$PATH"
 date -u +"%Y-%m-%dT%H:%M:%S%:z"
+
+#If it doesnt exist, create the ~/tmp directory on the user's home dir. If it exists, clean it
+TMP_DIR=~/tmp
+if [ -d "$TMP_DIR" ]; then
+    echo "Cleaning $TMP_DIR directory..."
+    rm -rf "${TMP_DIR:?}/"*
+else
