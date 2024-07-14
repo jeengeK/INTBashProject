@@ -12,6 +12,6 @@ if [ -f "$HOME/.token" ]; then
     fi
 fi
 
-umask 007
+umask 006
 export PATH="$PATH:/home/john/usercommands"
 date -u +"%Y-%m-%dT%H:%M:%S%:z"
